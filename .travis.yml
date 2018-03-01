@@ -1,11 +1,8 @@
 language: python
 
 python:
-    - '2.5'
-    - '2.6'
-    - '2.7'
-    - 'pypy'
     - '3.6'
+    - 'pypy3'
 
 # Compile C library
 before_install:
@@ -21,8 +18,6 @@ install:
 
 before_script:
     - 'pep8 --ignore=E501,E225 opus'
-    - 'if [[ $TRAVIS_PYTHON_VERSION == "2.5" ]]; then sudo pip install unittest2 --use-mirrors; fi'
-    - 'if [[ $TRAVIS_PYTHON_VERSION == "2.6" ]]; then sudo pip install unittest2 --use-mirrors; fi'
 
 script:
     - 'LD_PRELOAD=/usr/local/lib/libopus.so python setup.py test'
