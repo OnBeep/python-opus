@@ -136,8 +136,7 @@ def encode(
     )
 
     if result < 0:
-        raise opuslib.OpusError(
-            'Opus Encoder returned result="{}"'.format(result))
+        raise opuslib.OpusError(result)
 
     return array.array('b', opus_data[:result]).tobytes()
 
@@ -173,8 +172,7 @@ def encode_float(
     )
 
     if result < 0:
-        raise opuslib.OpusError(
-            'Encoder returned result="{}"'.format(result))
+        raise opuslib.OpusError(result)
 
     return array.array('b', opus_data[:result]).tobytes()
 
