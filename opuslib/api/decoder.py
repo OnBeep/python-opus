@@ -297,6 +297,7 @@ def decode_float(  # pylint: disable=too-many-arguments
 
 
 libopus_ctl = opuslib.api.libopus.opus_decoder_ctl
+libopus_ctl.argtypes = (DecoderPointer, ctypes.c_int,)
 libopus_ctl.restype = ctypes.c_int
 
 

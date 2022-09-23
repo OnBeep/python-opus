@@ -70,6 +70,7 @@ def create_state(fs: int, channels: int, application: int) -> ctypes.Structure:
 
 
 libopus_ctl = opuslib.api.libopus.opus_encoder_ctl
+libopus_ctl.argtypes = (EncoderPointer, ctypes.c_int,)
 libopus_ctl.restype = ctypes.c_int
 
 
