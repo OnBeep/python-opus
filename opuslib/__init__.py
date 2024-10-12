@@ -12,7 +12,7 @@ Python bindings to the libopus, IETF low-delay audio codec
 :author: Никита Кузнецов <self@svartalf.info>
 :copyright: Copyright (c) 2012, SvartalF
 :license: BSD 3-Clause License
-:source: <https://github.com/onbeep/opuslib>
+:source: <https://github.com/orion-labs/opuslib>
 
 """
 
